@@ -28,3 +28,10 @@ func Decorate(f BasicFunc, ds ...Decorator) BasicFunc
 ```
 
 功能：装饰者模式。Decorator可以在BasicFunc执行前后做些额外的工作，比如记录日志等等。
+
+## filelock
+
+摘抄自 <https://github.com/nsqio/nsq/blob/master/internal/dirlock/dirlock.go#L22>
+
+作用：当前程序会锁定特定文件或目录，其他程序再锁定相同文件或目录则失败。
+
