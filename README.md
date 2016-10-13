@@ -35,3 +35,21 @@ func Decorate(f BasicFunc, ds ...Decorator) BasicFunc
 
 作用：当前程序会锁定特定文件或目录，其他程序再锁定相同文件或目录则失败。
 
+##  split_text_to_words
+
+摘抄自 <https://github.com/huichen/sego/blob/master/segmenter.go#L153>
+
+作用：将text中的一串字母或数字当做一个Text，其他字当做一个Text输出
+
+比如 `splitTextToWords(Text("中中 ab34c国家bcD12"))`, 分离结果就是：
+
+```
+中
+中
+
+ab34c
+国
+家
+bcD12
+```
+
